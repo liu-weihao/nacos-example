@@ -1,13 +1,15 @@
+server:
+  port: 8200
 spring:
   application:
-    name: user
+    name: order
   cloud:
     nacos:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yaml
         namespace: 7d3e5f19-a102-471a-b6e0-67bd7d1d35f3
-        group: user-config
+        group: ORDER_GROUP
       discovery:
         server-addr: 127.0.0.1:8848
         namespace: 7d3e5f19-a102-471a-b6e0-67bd7d1d35f3
