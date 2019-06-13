@@ -1,1 +1,28 @@
-
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 7d3e5f19-a102-471a-b6e0-67bd7d1d35f3
+        group: order-config
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 7d3e5f19-a102-471a-b6e0-67bd7d1d35f3
+---
+spring:
+  profiles: prod
+  cloud:
+    nacos:
+      config:
+        server-addr: 11.162.196.16:8848
+        namespace: c4c81555-91e1-4ef5-8b57-77c5407b3481
+      discovery:
+        server-addr: 11.162.196.16:8848
+        namespace: c4c81555-91e1-4ef5-8b57-77c5407b3481
+---
+spring:
+  profiles:
+    active: dev
